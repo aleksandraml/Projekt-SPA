@@ -1,0 +1,46 @@
+.services {
+    .service {
+        position: relative;
+        height: 340px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-overlay {
+            position: absolute;
+            background-color: #1e7b98;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            @include flexbox;
+            @include flex-align(center, center);
+            flex-direction: column;
+            opacity: 0;
+            transition: all .3s;
+            height: 100%;
+
+            &:hover{
+                opacity: 1;
+            }
+
+            img {
+                width: 60px;
+                height: auto;
+
+            }
+
+            h3{
+                color: #fff;
+            }
+        }
+    }
+
+    @media all and (min-width: $medium) {
+        .service{
+            height: 400px;
+        }
+    }
+}
