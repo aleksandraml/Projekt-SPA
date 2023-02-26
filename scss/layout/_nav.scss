@@ -5,9 +5,9 @@
     z-index: 9999;
     background-color: #fff;
     padding: 12px 0;
-    
 
-    .main-nav-holder{
+
+    .main-nav-holder {
         @include flexbox;
         justify-content: space-between;
     }
@@ -16,25 +16,25 @@
         position: fixed;
         background-color: $primary-color;
         top: 0;
-        right:0;
+        right: 0;
         max-width: 480px;
         text-align: right;
         display: none;
         padding: 12px 23px;
 
-        &.open{
-            display:block;
+        &.open {
+            display: block;
         }
 
-        .menu{
+        .menu {
             list-style: none;
 
-            .menu-item{
+            .menu-item {
                 font-size: 50px;
                 text-transform: uppercase;
                 padding: 20px 0;
 
-                .a{
+                .a {
                     color: #fff;
                     text-decoration: none;
                 }
@@ -49,81 +49,96 @@
 
     }
 
-    img{
+    img {
         height: 100%;
 
     }
 
 
     %mobile-controls {
-        font-size : 28px;
+        font-size: 28px;
         line-height: 50px;
         cursor: pointer;
     }
 
-
-.mobile-hamburger{
-    @extend %mobile-controls;
-    color: $primary-color;
-}
-
-.mobile-close{
-    @extend %mobile-controls;
-    color: $primary-color;
-    height: 50px;
-    text-align: right;
-    color: #fff;
-}
-
-
-@media all and (min-width: $large) {
-
-    .main-nav-holder{
-        justify-content: flex-start;
+    .mobile-hamburger {
+        @extend %mobile-controls;
+        color: $primary-color;
     }
 
-    .brand{
-        height: 80px;
+    .mobile-close {
+        @extend %mobile-controls;
+        color: #fff;
+        text-align: right;
+        height: 50px;
     }
 
 
-    %mobile-controls {
+    .open-menu-holder {
+        position: fixed;
+        background-color: $primary-color;
+        top: 0;
+        right: 0;
+        max-width: 480px;
+        width: 480px;
+        text-align: right;
+        padding: 12px 23px;
         display: none;
-    }
 
-    .open-menu-holder{
-        display: block;
-        position: static;
-        background-color: transparent;
-        width: auto;
-        max-width: 100%;
-        padding: 0;
-        align-self: flex-start;
-
-        .menu{
-            background-color: #fff;
+        &.open {
+            display: block;
+        }
 
 
-            .menu-item{
-                display: inline-block;
-                margin: 0 20px;
-                font-size: initial;
-               
+        .menu {
+            list-style: none;
 
-                .a{
-                    color: $secondary-color;
-                    font-weight: 700;
-                    
+            .menu-item {
+                font-size: 50px;
+                text-transform: uppercase;
+                padding: 20px 0;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
                 }
-
             }
         }
+
     }
-}
+
+    @media all and (min-width: $large) {
+
+
+        .main-nav-holder {
+            justify-content: flex-start;
+        }
+
+
+        .brand {
+            height: 80px;
+        }
+
+
+        %mobile-controls {
+            display: none;
+        }
+
+        .open-menu-holder {
+            display: block;
+            position: static;
+            background-color: transparent;
+            width: auto;
+            max-width: 100%;
+            padding: 0;
+            align-self: flex-start;
+
+            .menu {
+                @include menu-list;
+            }
+        }
+
+    }
+
 
 }
-
-
-
-
-

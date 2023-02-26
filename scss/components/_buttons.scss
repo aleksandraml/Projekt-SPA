@@ -12,7 +12,7 @@
     @extend %btn;
     background-color: $primary-color;
 
-    &hover {
+    &:hover {
         background-color: $button-color;
     }
 }
@@ -21,7 +21,19 @@
     @extend %btn;
     background-color: $button-color;
 
-    &hover {
+    &:hover {
         background-color: $primary-color;
+    }
+}
+
+.btn-form {
+    @extend %btn;
+    background-color: #fff;
+    color: $secondary-color;
+    font-weight: 700;
+
+    &:hover{
+        background-color: $button-color;
+        color: #fff;
     }
 }

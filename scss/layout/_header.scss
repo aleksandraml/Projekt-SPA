@@ -25,7 +25,7 @@
     }
 
 
-    .buttton-panel {
+    .buttons-panel {
         margin-top: 40px;
 
         .reserve {
@@ -35,7 +35,7 @@
             background-color: $primary-color;
             text-decoration: none;
 
-            &hover {
+            &:hover {
                 background-color: $button-color;
             }
         }
@@ -65,7 +65,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        max-width: 33%;
+        max-width: 30%;
         z-index: 100000;
         display: none;
     }

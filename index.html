@@ -22,14 +22,13 @@
 
 
     <!-- Menu - hamburger -->
+    
     <nav class="main-nav">
         <div class="container">
             <div class="main-nav-holder">
-                <a href="" class="brand"><img src="img/logo-txt.png" alt="brand-logo"></a>
+                <a href="" class="brand"><img src="img/logo-txt.png" alt=""></a>
 
-                <div class="mobile-hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="mobile-hamburger"><i class="fas fa-bars"></i></div>
                 <div class="open-menu-holder">
                     <div class="mobile-close"><i class="fas fa-times"></i></div>
                     <ul class="menu">
@@ -44,12 +43,11 @@
         </div>
     </nav>
 
-
-    <!-- Section  -->
+    <!-- Section main-header  -->
 
     <header class="main-header">
         <div class="container">
-            <div class="main-header-folder folder-width">
+            <div class="main-header-holder folder-width">
                 <p class="header-description">SPA & Beauty Center</p>
                 <h1>Beauty and sucess start here</h1>
                 <p class="main-header-content">Our goal is to provide a world-class spa experience, for both our guests
@@ -57,8 +55,8 @@
                     create a totally memorable and rejuvenating experience. Our goal entails building enduring and
                     rewarding relationships with our clients and community, through knowledge, wellness and superior
                     service.</p>
-                <div class="button-panel">
-                    <a href="" class="resevere">Rerserve now</a>
+                <div class="buttons-panel">
+                    <a href="" class="reserve">Reserve now</a>
                     <a href="" class="watch"><i class="fas fa-play"></i>Watch our story</a>
                 </div>
             </div>
@@ -67,6 +65,7 @@
         <img src="img/header-bg.png" alt="header-bg" class="header-bg">
     </header>
 
+    <!-- About-description -->
 
     <section id="about" class="about">
         <div class="container">
@@ -85,6 +84,7 @@
 
     </section>
 
+    <!-- SPA- services -->
 
     <section id="services" class="services">
         <div class="row">
@@ -120,7 +120,9 @@
 
     </section>
 
-    <section id="procedures" class="procedures">
+    <!-- Procedures -description -->
+
+    <!-- <section id="procedures" class="procedures">
         <div class="container">
             <header class="section-header">
                 <h2>Popular procedures</h2>
@@ -163,14 +165,58 @@
             </div>
         </div>
 
+    </section> -->
+    <section id="procedures" class="procedures">
+        <div class="container">
+            <header class="section-header">
+                <h2>Popular Precedures</h2>
+                <p>At Our SPA, helping clients to look and feel fabulous is what we do best. As our list of
+                    treatments continues to grow, we love introducing the latest trends to our beauty salon, giving our
+                    lovely clients tons of options to choose from. </p>
+            </header>
+
+            <div class="row">
+                <div class="infobox col col-md-33p">
+                    <div class="infobox-inner">
+                        <img src="img/procedures-bg-1.jpg" alt="Procedure 1">
+                        <h3>Exfoliation</h3>
+                        <p>Exfoliation is touted as a quick and easy way to give skin that longed-for glow.The process —
+                            which involves removing dead skin cells — can reduce dullness and even improve skin tone and
+                            conditions like acne.</p>
+                        <a href="" class="btn-secondary">Read more</a>
+                    </div>
+                </div>
+                <div class="infobox col col-md-33p">
+                    <div class="infobox-inner">
+                        <img src="img/procedures-bg-2.jpg" alt="Procedure 2">
+                        <h3>Body scrubs</h3>
+                        <p>Body scrub is a popular spa body treatment. It is basically a facial for the body. It exfoliates
+                            and hydrates your skin, leaving it smooth and soft. A body scrub is done usually sea salt or
+                            sugar mixed with massage oils and other aromatic essential oils treatment.</p>
+                        <a href="" class="btn-secondary">Read more</a>
+                    </div>
+                </div>
+                <div class="infobox col col-md-33p">
+                    <div class="infobox-inner">
+                        <img src="img/procedures-bg-3.jpg" alt="Procedure 3">
+                        <h3>Massage Therapy</h3>
+                        <p>In massage therapy, a trained, certified medical professional (massage therapist) manipulates the
+                            soft tissues of your body — muscle, connective tissue, tendons, ligaments and skin. The massage
+                            therapist uses varying degrees of pressure and movement</p>
+                        <a href="" class="btn-secondary">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
+    <!-- Members -section -->
 
     <section id="team" class="team">
         <div class="container">
             <header class="section-header">
-                <h2>Meet out team!</h2>
+                <h2>Meet our team!</h2>
                 <p>At Our SPA we aim to give you the most professional treatments available in a private and relaxed
                     atmosphere. Our team of highly skilled and experienced therapists are here to help you resolve any
                     of your beauty concerns or, indeed, just to give you that little bit of pampering you deserve. </p>
@@ -220,8 +266,154 @@
 
     </section>
 
+    <!-- Appointment-form -->
 
-    <script src="main.js"></script>
+    <section id="meeting" class="meeting">
+        <div class="desktop-background" style="background-image: url(img/contact-bg.jpg);"></div>
+
+        <form id="meeting-form">
+            <input type="text" name="name" placeholder="Name" id="meeting-name" class="form-field">
+            <input type="email" name="email" placeholder="Email" id="meeting-email" class="form-field">
+            <select name="service" id="meeting-service" class="form-field">
+                <option value="">Select service</option>
+                <option value="normal">Normal Service</option>
+                <option value="vip">VIP Serevice</option>
+            </select>
+
+            <input type="tel" name="phone" placeholder="Phone" id="meeting-phone" class="form-field">
+            <input type="date" name="date" id="meeting-date" class="form-field">
+            <input type="time" name="time" id="meeting-time" class="form-field">
+
+            <textarea name="message" id="meeting-message" placeholder="Your notes" class="form-field"></textarea>
+            <button type="submit" class="btn-form">Make an Appointment</button>
+            <p class="meeting-message"></p>
+        </form>
+    </section>
+
+    <!-- Blog- section -->
+
+    <!-- <section id="blog" class="blog">
+        <div class="container">
+            <header class="section-header">
+                <h2>Latest from the blog</h2>
+                <p>The latest news and views from our team of new treatment and beauty procedures. Check our
+                    helathy-tips, make-up advice and more! </p>
+            </header>
+        </div>
+
+        <div class="row">
+            <div class="infobox col col-md-33p">
+                <div class="infobox-inner">
+                    <p class="meta"><a href="" class="category">Beuty procedures</a>|<a href="" class="post-date">24
+                            February</a></p>
+                    <img src="img/blog-1.jpg" alt="blog 1">
+                    <h3>New Peel Treatment</h3>
+                    <p>A chemical peel is a procedure in which a chemical solution is applied to the skin to remove the
+                        top layers. The skin that grows back is smoother. With a light or medium peel, you may need to
+                        undergo the procedure more than once to get the desired results.</p>
+                    <a href="" class="btn-secondary">Read more</a>
+                </div>
+            </div>
+            <div class="infobox col col-md-33p">
+                <div class="infobox-inner">
+                    <p class="meta"><a href="" class="category">Tips</a>|<a href="" class="post-date">17 February</a>
+                    </p>
+                    <img src="img/blog-2.jpg" alt="blog 2">
+                    <h3>Six Tips To Maintain Healthy Feet </h3>
+                    <p>Physical therapists provide the following six tips to help you improve or maintain your foot
+                        health and the freedom to move.</p>
+                    <a href="" class="btn-secondary">Read more</a>
+                </div>
+            </div>
+            <div class="infobox col col-md-33p">
+                <div class="infobox-inner">
+                    <p class="meta"><a href="" class="category">Health care</a>|<a href="" class="post-date">10
+                            February</a></p>
+                    <img src="img/blog-3.jpg" alt="blog 3">
+                    <h3>Oils & Their Role in Beauty Care Products</h3>
+                    <p>Oils have become increasingly popular within the past few years. While they seem to be the newest
+                        and greatest trend, essential oils have been used since pre-history to treat disorders or
+                        promote beauty. Below is a short list from Bell Chem, experts in beauty care chemicals, of some
+                        of the most powerful essential oils relating to beauty care. </p>
+                    <a href="" class="btn-secondary">Read more</a>
+                </div>
+            </div>
+        </div>
+
+    </section> -->
+
+
+
+    <!-- Contact-section -->
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <header class="section-header">
+                <h2>Latest From Blog</h2>
+                <p>To doesn't his appear replenish together called he of mad place won't wherein blessed second every
+                    wherein were meat kind wherein and martcin </p>
+            </header>
+
+            <div class="row">
+                <div class="contact-data col col-md-33p">
+                    <div class="contact-item">
+                        <span class="img-holder">
+                            <img src="img/icons/icon-map.png" alt="map">
+                        </span>
+                        <p>848 E 28th ST, BROOKLYN <br> NEW YORK, USa</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="img-holder">
+                            <img src="img/icons/icon-mail.png" alt="mail">
+                        </span>
+                        <p>
+                            <a href="mailto:example@example.pl">example@example.pl</a><br>
+                            <a href="mailto:example@example.pl">example@example.pl</a>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="img-holder">
+                            <img src="img/icons/icon-tel.png" alt="phone">
+                        </span>
+                        <p>
+                            <span>+02 365 2365 3265 (02)</span><br>
+                            <span>+01 365 2365 3265 (04)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-form col col-md-66p">
+                    <form>
+                        <input type="text" placeholder="First name" name="name">
+                        <input type="email" placeholder="Email address" name="email">
+                        <textarea name="" placeholder="Write message"></textarea>
+                        <button class="btn-form">Submit now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer-section -->
+
+        <footer class="page-footer">
+         <img src="img/logo-txt.png" alt="logo">
+
+         <nav class="footer-nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="">Home</a></li>
+                <li class="menu-item"><a href="">About</a></li>
+                <li class="menu-item"><a href="">Feature</a></li>
+                <li class="menu-item"><a href="">Service</a></li>
+                <li class="menu-item"><a href="">Contact</a></li>
+            </ul>
+         </nav>
+
+         <p class="copy">Copyright 2023</p>
+        </footer>
+
+
+        <script src="main.js"></script>
 </body>
 
 </html>
