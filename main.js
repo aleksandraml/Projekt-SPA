@@ -19,7 +19,7 @@ const createMeeting = (meeting) => {
         .then(resJSON => {
             console.log(resJSON);
             meetingMessage.classList.add('send');
-            meetingMessage.innerText = `Dziękujemy ${resJSON.meeting.name}. Zostałeś/aś zapisany/a!`;
+            meetingMessage.innerText = `Dziękujemy ${resJSON.appointment.name}. Zostałeś/aś zapisany/a!`;
 
         });
 }

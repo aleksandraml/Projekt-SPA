@@ -246,19 +246,7 @@ body {
   color: rgba(136, 136, 136, 0.5333333333);
 }
 
-.container {
-  max-width: 100%;
-  width: 100%;
-  padding: 0 23px;
-  margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Bellota", cursive;
   color: #473452;
 }
@@ -269,10 +257,11 @@ h2 {
 
 h3 {
   font-size: 22px;
+  height: 50px;
 }
 
-a,
-button {
+button,
+a {
   transition: all 0.3s;
 }
 
@@ -280,36 +269,43 @@ p {
   line-height: 1.5;
 }
 
-.procedures {
+section {
   padding: 30px 0;
 }
-.procedures .section-header {
+section .section-header {
   text-align: center;
   margin-bottom: 40px;
 }
-.procedures .section-header .p {
+section .section-header p {
   margin: auto;
   font-weight: 300;
 }
 @media all and (min-width: 768px) {
-  .procedures .section-header p {
+  section .section-header p {
     max-width: 70%;
   }
 }
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 23px;
+  margin: 0 auto;
+}
+
 @media all and (min-width: 992px) {
-  .procedures .container {
+  .container {
     max-width: 960px;
   }
-  .procedures section {
+  section {
     padding: 60px 0;
   }
 }
 @media all and (min-width: 1200px) {
-  .procedures .container {
+  .container {
     max-width: 1140px;
   }
 }
-
 /* Fonts */
 /* Colors */
 /* Containers */
@@ -368,10 +364,35 @@ p {
   color: #1ba4ce;
 }
 .main-nav .mobile-close {
-  color: #1ba4ce;
-  height: 50px;
-  text-align: right;
   color: #fff;
+  text-align: right;
+  height: 50px;
+}
+.main-nav .open-menu-holder {
+  position: fixed;
+  background-color: #1ba4ce;
+  top: 0;
+  right: 0;
+  max-width: 480px;
+  width: 480px;
+  text-align: right;
+  padding: 12px 23px;
+  display: none;
+}
+.main-nav .open-menu-holder.open {
+  display: block;
+}
+.main-nav .open-menu-holder .menu {
+  list-style: none;
+}
+.main-nav .open-menu-holder .menu .menu-item {
+  font-size: 50px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+.main-nav .open-menu-holder .menu .menu-item a {
+  color: #fff;
+  text-decoration: none;
 }
 @media all and (min-width: 992px) {
   .main-nav .main-nav-holder {
@@ -393,16 +414,19 @@ p {
     align-self: flex-start;
   }
   .main-nav .open-menu-holder .menu {
+    list-style: none;
     background-color: #fff;
   }
   .main-nav .open-menu-holder .menu .menu-item {
     display: inline-block;
     margin: 0 20px;
     font-size: initial;
+    text-transform: uppercase;
   }
-  .main-nav .open-menu-holder .menu .menu-item .a {
+  .main-nav .open-menu-holder .menu .menu-item a {
     color: #473452;
     font-weight: 700;
+    text-decoration: none;
   }
 }
 
@@ -508,7 +532,6 @@ p {
   max-width: 850px;
   font-weight: 300;
   margin: 0 auto;
-  margin: 26px;
 }
 
 .row {
@@ -525,7 +548,10 @@ p {
     width: 50%;
   }
   .col-md-33p {
-    width: 33, 33%;
+    width: 33.33%;
+  }
+  .col-md-66p {
+    width: 66.66%;
   }
 }
 @media all and (min-width: 992px) {
@@ -578,11 +604,11 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
-.meeting .desktop-bg {
+.meeting .desktop-background {
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 40%;
-  background-size: cover;
   display: none;
 }
 .meeting form {
@@ -590,16 +616,112 @@ p {
   background-color: #1ba4ce;
   padding: 80px 40px;
 }
+.meeting form .meeting-message {
+  width: 100%;
+  display: none;
+}
+.meeting form .meeting-message.error {
+  color: #f00;
+  display: block;
+}
+.meeting form .meeting-message.send {
+  color: #fff;
+  display: block;
+}
 @media all and (min-width: 992px) {
-  .meeting form {
-    width: 40%;
-    padding: 80px;
+  .meeting .desktop-background {
     display: block;
+  }
+  .meeting form {
+    width: 60%;
+    padding: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .meeting form input,
+  .meeting form select {
+    width: 49%;
+  }
+  .meeting form textarea {
+    margin: 60px 0;
   }
 }
 
 .team {
   padding-bottom: 200px;
+}
+
+.contact {
+  color: #fff;
+  background-color: #1ba4ce;
+}
+.contact .section-header {
+  color: #fff;
+}
+.contact .section-header h2 {
+  color: #fff;
+}
+.contact .contact-data {
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+.contact .contact-data .contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.contact .contact-data .contact-item .img-holder {
+  width: 15%;
+  margin-right: 10px;
+  text-align: center;
+}
+.contact .contact-data .contact-item .img-holder img {
+  width: 30px;
+}
+.contact .contact-data .contact-item a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact .contact-data .contact-item a:hover {
+  text-decoration: underline;
+}
+@media all and (min-width: 768px) {
+  .contact .contact-data .contact-item {
+    justify-content: flex-start;
+  }
+}
+.contact .contact-form {
+  padding: 25px 0;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 30px 0;
+}
+.page-footer img {
+  width: 100px;
+}
+.page-footer .footer-nav .menu {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 0;
+}
+.page-footer .footer-nav .menu .menu-item {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: initial;
+  text-transform: uppercase;
+}
+.page-footer .footer-nav .menu .menu-item a {
+  color: #473452;
+  font-weight: 700;
+  text-decoration: none;
+}
+.page-footer .footer-nav .menu .menu-item {
+  padding: 15px 0;
 }
 
 .btn-form, .btn-secondary, .btn-primary {
@@ -610,6 +732,7 @@ p {
   text-decoration: none;
   border: 0;
   color: #fff;
+  margin-top: 15px;
 }
 
 .btn-primary {
@@ -650,6 +773,21 @@ p {
 .infobox .infobox-inner:hover {
   box-shadow: 0 5px 20px #f0f0f0;
 }
+.infobox .infobox-inner .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+.infobox .infobox-inner .meta .category {
+  margin-right: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+.infobox .infobox-inner .meta .post-date {
+  margin-left: 5px;
+  text-decoration: none;
+  color: inherit;
+}
 .infobox .infobox-inner img {
   width: 100%;
 }
@@ -687,7 +825,7 @@ p {
   height: 0;
   overflow: hidden;
 }
-.infobox-team .infobox-caption .team-social-icons .a {
+.infobox-team .infobox-caption .team-social-icons a {
   height: 35px;
   width: 35px;
   font-size: 20px;
@@ -699,7 +837,7 @@ p {
   border-radius: 50%;
   margin: 0 10px;
 }
-.infobox-team .infobox-caption .team-social-icons .a:hover {
+.infobox-team .infobox-caption .team-social-icons a:hover {
   border: 1px solid #1ba4ce;
   color: #fff;
   background-color: #1ba4ce;
